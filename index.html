@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GameMash 2025 — Ranking de videojuegos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header class="wrap">
+  <h1>🎮 GameMash 2025</h1>
+  <p class="sub">Comparación A/B para recomendar videojuegos según perfil y contexto.</p>
+</header>
+
+<main class="wrap grid">
+
+  <section class="card">
+    <h2>1) Configura</h2>
+
+    <label>Tipo de jugador</label>
+    <select id="segmentSelect"></select>
+
+    <label>Contexto</label>
+    <select id="contextSelect"></select>
+
+    <div class="row">
+      <button id="btnNewPair" class="ghost">🔁 Nuevo duelo</button>
+      <button id="btnReset" class="danger">🧹 Reiniciar</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>2) Elige</h2>
+    <p id="question" class="question">—</p>
+
+    <div class="duel">
+      <button id="btnA" class="pick">
+        <span class="tag">A</span>
+        <span id="labelA" class="title">—</span>
+      </button>
+
+      <button id="btnB" class="pick">
+        <span class="tag">B</span>
+        <span id="labelB" class="title">—</span>
+      </button>
+    </div>
+
+    <p class="hint">Cada elección ajusta el ranking del algoritmo.</p>
+
+    <div class="row">
+      <button id="btnShowTop" class="primary">🏆 Ver Top 10</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>3) Ranking</h2>
+    <div id="topBox" class="topbox"></div>
+    <p class="hint">Ranking filtrado por jugador y contexto.</p>
+  </section>
+
+</main>
+
+<footer class="wrap foot">
+  <small>Algoritmo de recomendación A/B + Elo — GameMash 2025</small>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
