@@ -1,15 +1,16 @@
 :root {
-  /* Colores base */
+  /* =====================
+     Paleta principal
+  ===================== */
+
   --bg: #050b14;
   --panel: #0b1625;
   --panel2: #0f213d;
   --border: #1e3557;
 
-  /* Texto */
   --text: #ffffff;
   --muted: rgba(255,255,255,.7);
 
-  /* Colores protagonistas */
   --blue: #1e90ff;
   --green: #2ecc71;
   --red: #e74c3c;
@@ -18,7 +19,7 @@
 }
 
 /* =====================
-   Estructura general
+   Base
 ===================== */
 
 body {
@@ -43,6 +44,10 @@ h1 {
   color: var(--muted);
 }
 
+/* =====================
+   Layout
+===================== */
+
 .grid {
   display: grid;
   gap: 14px;
@@ -50,11 +55,13 @@ h1 {
 }
 
 @media (min-width: 900px) {
-  .grid { grid-template-columns: 1fr 1fr 1fr; }
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /* =====================
-   Tarjetas
+   Cards
 ===================== */
 
 .card {
@@ -62,7 +69,7 @@ h1 {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 14px;
-  box-shadow: 0 0 20px rgba(30,144,255,.05);
+  box-shadow: 0 0 18px rgba(30,144,255,.06);
 }
 
 label {
@@ -73,7 +80,7 @@ label {
 }
 
 /* =====================
-   Selects
+   Select
 ===================== */
 
 select {
@@ -115,7 +122,7 @@ button:active {
   transform: scale(.98);
 }
 
-/* Botón principal (ver ranking) */
+/* Principal */
 .primary {
   background: linear-gradient(135deg, var(--blue), #4da3ff);
   color: #020712;
@@ -125,7 +132,7 @@ button:active {
   box-shadow: 0 0 12px rgba(30,144,255,.5);
 }
 
-/* Botón neutral */
+/* Neutral */
 .ghost {
   background: #0b1b33;
   color: var(--text);
@@ -136,10 +143,10 @@ button:active {
   border-color: var(--blue);
 }
 
-/* Botón peligro */
+/* Peligro */
 .danger {
   background: linear-gradient(135deg, var(--red), #ff6b5f);
-  color: #fff;
+  color: #ffffff;
 }
 
 .danger:hover {
@@ -147,16 +154,16 @@ button:active {
 }
 
 /* =====================
-   Pregunta
+   Pregunta (VERSUS)
 ===================== */
 
 .question {
-  background: #08162a;
-  border: 1px solid var(--border);
+  background: #0a1e38;
+  border: 1px solid var(--blue);
   padding: 12px;
   border-radius: 12px;
   color: var(--blue);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* =====================
@@ -171,14 +178,19 @@ button:active {
 }
 
 @media (min-width: 900px){
-  .duel { grid-template-columns: 1fr 1fr; }
+  .duel {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .pick {
-  background: linear-gradient(180deg, #0b1b33, #08162a);
+  background: linear-gradient(180deg, #081b33, #061427);
   border: 2px solid var(--border);
   text-align: left;
   padding: 16px;
+
+  /* 🔑 FIX CRÍTICO DE CONTRASTE */
+  color: #ffffff;
 }
 
 .pick:hover {
@@ -200,7 +212,11 @@ button:active {
   font-weight: 900;
 }
 
-.title {
+/* Texto del videojuego */
+.pick .title {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 600;
   vertical-align: middle;
 }
 
